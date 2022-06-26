@@ -1,0 +1,387 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+.logo > img{
+    width: 85%;
+}
+.m-2{
+    padding: 20px 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    line-height: 40px;
+}
+.title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+}
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #D9D9D9;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 20px;
+}
+.block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.main1{
+    display: flex;
+    align-items: stretch;
+}
+.col-3{
+    padding: 20px 0;
+    width: 30%;
+    background: #F6F7F7;
+    position: relative;
+}
+.col-7{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 65%;
+    margin-left: 50px;
+}
+
+
+.main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.panel{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(217, 217, 217, 0.3);
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background: #D9D9D9;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.text__card{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px 0;
+}
+.card > h4{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.pagi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    padding: 30px 0;
+    margin-bottom: 100px;
+}
+.pagi__btn{
+    font-size: 32px;
+}
+.activa__numb{
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    background: #D9D9D9;
+}
+.footer__logo{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 38px;
+}
+.header__title{
+    padding-bottom: 20px;
+    line-height: 34px;
+}
+.btn__footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 50px;
+}
+
+.up{
+    width: 62px;
+    height: 62px;
+    position: fixed;
+    bottom: 12%;
+    left: 20%;
+    background: url("../img/up.svg") no-repeat center / cover;
+    cursor: pointer;
+}
+
+
+.btn__back{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 33px;
+    transition: background-color 0.2s;
+}
+
+.btn__back:hover{
+    background-color: #a8a8a8;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 63px;
+}
+
+
+
+.info__img{
+    width: 100%;
+    height: 100%;
+}
+
+.info__content{
+    max-width: 293px;
+    margin-left: 40px;
+}
+
+.info__content__block:not(:last-child){
+    margin-bottom: 14px;
+}
+
+.info__content__title{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info__content__text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.info__title{
+    font-size: 24px;
+    margin-top: 21px;
+    margin-bottom: 40px;
+}
+
+.parameters{
+    font-weight: 500;
+}
+
+.parameters__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.parameters__block:not(:last-child){
+    margin-bottom: 12px;
+}
+
+.parameters__name{
+    font-size: 20px;
+}
+
+.parameters__info{
+    font-size: 20px;
+    max-width: 368px;
+}
+
+.about{
+    margin-top: 40px;
+}
+
+.about__title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about__text{
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.map{
+    width: 100%;
+    height: 254px;
+    margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1280px) {
+    .container{
+        max-width: 1024px;
+    }
+    .card{
+        width: 32%;
+    }
+    .text__card {
+        font-size: 17px;
+    }
+    .panel{
+        margin-top: 58px;
+    }
+    .panel__link{
+        font-size: 19px;
+    }
+    .up{
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        max-width: 768px;
+    }
+    .card{
+        width: 48%;
+    }
+    .panel{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px 22px;
+    }
+    .pagi{
+        width: 30%;
+    }
+    .logo > img{
+        width: 100%;
+    }
+    .up{
+        left: 12%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: 480px;
+    }
+    .col-3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .col-7{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 200px;
+    }
+    .main1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo > img{
+        width: 35%;
+        margin-top: 15px;
+    }
+    .panel__block{
+        width: 40px;
+        height: 40px;
+        background: url("../img/burger_menu.png") no-repeat center / cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 40px;
+    }
+    .panel{
+        display: none;
+    }
+    .footer__logo{
+        display: none;
+    }
+    .btn__footer{
+        right: 50%;
+        margin-right: -155px;
+    }
+    .up{
+        bottom: 1%;
+        left: 1%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container{
+        max-width: 320px;
+    }
+    .logo > img{
+        width: 50%;
+    }
+    .header__title{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .text__card{
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    .card > h4{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .btn__footer{
+        font-size: 18px;
+    }
+    .pagi__btn{
+        font-size: 20px;
+    }
+    .pagi__num{
+        font-size: 18px;
+    }
+    .pagi{
+        width: 40%;
+    }
+    .up{
+        width: 40px;
+        height: 40px;
+    }
+    .col-7{
+        margin-top: 200px;
+    }
+    .info{
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .info__slide{
+        width: 100%;
+        height: 100%;
+    }
+    .parameters__block{
+        flex-direction: column;
+    }
+    .info__content{
+        margin-left: 0;
+    }
+}
