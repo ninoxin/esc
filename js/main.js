@@ -35,5 +35,14 @@ document.addEventListener('click', (e) =>{
 })
 
 
+const panelBlock = document.querySelector('.panel__block')
+const panel = document.querySelector('.panel')
 
+panelBlock.addEventListener('click', (e) => {
+    if (e.target.classList.contains('panel__block')) {
+        panel.classList.add('panel-open')
+    } else if (e.target.closest('.panel__close')) {
+        panel.classList.remove('panel-open')
+    }
+})
 

@@ -313,6 +313,16 @@ a{
     height: 254px;
     margin-bottom: 120px;
 }
+.panel__close {
+    width: 20px;
+    height: 20px;
+    background: url("../img/close.svg") no-repeat center / cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 35px;
+    display: none;
+}
 
 @media screen and (max-width: 1280px) {
     .container{
@@ -331,7 +341,7 @@ a{
         font-size: 19px;
     }
     .up{
-        left: 10%;
+        right: 5%;
     }
 }
 
@@ -354,7 +364,7 @@ a{
         width: 100%;
     }
     .up{
-        left: 12%;
+        right: 5%;
     }
 }
 
@@ -371,7 +381,7 @@ a{
     .col-7{
         width: 100%;
         margin-left: 0;
-        margin-top: 200px;
+        margin-top: 80px;
     }
     .main1{
         display: flex;
@@ -381,7 +391,7 @@ a{
         width: 35%;
         margin-top: 15px;
     }
-    .panel__block{
+    .panel__block {
         width: 40px;
         height: 40px;
         background: url("../img/burger_menu.png") no-repeat center / cover;
@@ -390,8 +400,27 @@ a{
         right: 0;
         margin: 40px;
     }
-    .panel{
-        display: none;
+
+    .panel {
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: auto;
+        width: 100%;
+        background: #fff;
+        z-index: 5;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+        overflow: scroll;
+        max-height: 100vh;
+    }
+
+    .panel-open {
+        transform: translateY(0);
+    }
+
+    .panel__close {
+        display: block;
     }
     .footer__logo{
         display: none;
@@ -402,7 +431,30 @@ a{
     }
     .up{
         bottom: 1%;
-        left: 1%;
+        right: 1%;
+    }
+    .panel__list>ul>li {
+        width: 100%;
+    }
+
+    .panel__list {
+        left: 0;
+        max-width: 280px;
+        position: static;
+    }
+
+    .panel__box {
+        flex-direction: column;
+    }
+    .btn{
+        font-size: 16px!important;
+    }
+    .btn__back{
+        padding: 0;
+        margin-top: 0;
+    }
+    .header__title{
+        margin-top: 15px;
     }
 }
 
@@ -442,7 +494,7 @@ a{
         height: 30px;
     }
     .col-7{
-        margin-top: 200px;
+        margin-top: 80px;
     }
     .info{
         flex-wrap: wrap;
@@ -457,5 +509,15 @@ a{
     }
     .info__content{
         margin-left: 0;
+    }
+    .info__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    h2{
+        font-size: 20px!important;
+    }
+    span{
+        font-size: 16px!important;
     }
 }
