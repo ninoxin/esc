@@ -190,7 +190,7 @@ a{
     margin-bottom: 38px;
 }
 .header__title{
-    padding-bottom: 57px;
+    padding-bottom: 23px;
     line-height: 34px;
 }
 .btn__footer{
@@ -342,7 +342,7 @@ a{
         font-size: 17px;
     }
     .panel{
-        margin-top: 58px;
+        margin-top: 24px;
     }
     .panel__link{
         font-size: 19px;
