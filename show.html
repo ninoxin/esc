@@ -93,7 +93,39 @@
             <!-- /.about -->
             <h2 class="info__title">Я на карте:</h2>
             <div class="map">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8980.978275127316!2d37.61065649378931!3d55.75425358733195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5c6ae39171%3A0x95bf7ced8fea5cc1!2z0JrQuNGC0LDQuS3Qs9C-0YDQvtC0LCDQnNC-0YHQutCy0LA!5e0!3m2!1sru!2sru!4v1656174363940!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (начало) -->
+            <div style="width: auto;height: 240px" id="map970a7gva"></div>
+            <script>function YandexReadyHandler970a7gva() {
+                    var map = new ymaps.Map("map970a7gva", {
+                        center: [55.59413333691615, 38.39685820834704],
+                        zoom: 10,
+                        controls: ["zoomControl", "typeSelector"],
+                        type: "yandex#map"
+                    }, {
+                        suppressMapOpenBlock: true
+                    });
+                    map.geoObjects.add(new ymaps.GeoObject({
+                        geometry: {
+                            type: "Point",
+                            coordinates: [55.59160589303432, 38.30255888495588],
+                            hideIconOnBalloonOpen: false
+                        },
+                        properties: {
+                            balloonContent: decodeURIComponent("%3Cp%3E%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%3C%2Fp%3E"),
+                            iconCaption: decodeURIComponent("%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C"),
+                            hintCaption: decodeURIComponent("%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C"),
+                        }
+                    }, {
+                        preset: "islands#blackDotIconWithCaption",
+                    })
+                    ); return map;
+                }</script>
+            <script src="//api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru&onload=YandexReadyHandler970a7gva"
+                type="text/javascript"></script>
+            <div style="text-align: right;"><a href="https://maps-creator.com" target="_blank"
+                    style="color: #ccc; font: 13px Arial, Helvetica, sans-serif;">создано с помощью конструктора
+                    maps-creator.com</a></div>
+            <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
             </div>
             <button class="btn btn__footer">ВХОД В ЛИЧНЫЙ КАБИНЕТ</button>
         </div>
