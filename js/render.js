@@ -11,8 +11,20 @@ const renderError = (err) => {
 }
 
 const render = (data) => {
-    data.forEach(item => {
-        console.log(item);
+    let cards = document.querySelector('.cards')
+    data.forEach(data => {
+        cards.innerHTML += `
+            <a href="show.html" target="_blank" class="card">
+                     
+                <img src="img/girl.png" alt="girl">
+                <h4 class="title text__card">${data.name}</h4>
+                <p class="text__card">${data.phone}</p>
+                <p class="text__card">${data.district}</p>
+                <p class="text__card">${data.pricemin} - ${data.pricemax} рублей</p>
+            
+            
+            </a>
+            `
     });
     //render карточек и вообще любых данных на основании БД
 }
