@@ -84,7 +84,8 @@ a{
     margin: 5px 0;
     width: 100%;
 }
-.panel__link:hover{
+.panel__link:hover,
+.panel__link:focus{
     cursor: pointer;
     animation: showA .3s both;
 }

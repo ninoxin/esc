@@ -12,12 +12,24 @@ const scroll = document.querySelector('.up');
 
 
 const panelBtn = document.querySelectorAll('.panel__link')
-const panelList = document.querySelector('.panel__list')
+const panelList = document.querySelectorAll('.panel__list')
 
-
-panelBtn.forEach(el =>{
-    el.addEventListener('click', (i) =>{
-        i.preventDefault();
-        panelList.classList.toggle('open')
+panelBtn.forEach((el,i) =>{
+    el.addEventListener('click', (e) =>{
+        e.preventDefault();
+        panelList.forEach((item, im) =>{
+            if (i !== im) {
+                item.classList.remove('open')
+            }
+        })
+        panelList[i].classList.toggle('open')
     })
+})
+
+document.addEventListener('click', (e) =>{
+    if (!e.target.closest('.panel__link') ){
+        panelList.forEach((p) =>{
+            p.classList.remove('open')
+        })
+    }
 })
