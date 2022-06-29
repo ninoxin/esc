@@ -7,7 +7,6 @@ async function getDb() {
 
 const renderError = (err) => {
     console.log(err);
-    //здесь нужно открывать блок со страницей 404
 }
 
 const render = (data) => {
@@ -15,15 +14,35 @@ const render = (data) => {
     data.forEach(data => {
         cards.innerHTML += `
             <a href="show.html" target="_blank" class="card">
-                     
-                <img src="img/girl.png" alt="girl">
-                <h4 class="title text__card">${data.name}</h4>
-                <p class="text__card">${data.phone}</p>
-                <p class="text__card">${data.district}</p>
-                <p class="text__card">${data.pricemin} - ${data.pricemax} рублей</p>
-            
-            
-            </a>
+                    
+                        <img src="img/girl.png" alt="girl">
+                        <h4 class="title text__card">${data.name}</h4>
+                        <p class="text__card">${data.phone}</p>
+                        <div class="text__table">
+                            <div class="text__row">
+                                <p>Возвраст:</p>
+                                <span class="color">${data.age}</span>
+                            </div>
+                            <div class="text__row">
+                                <p>Грудь:</p>
+                                <span class="color">${data.breastsize}</span>
+                            </div>
+                            <div class="text__row">
+                                <p>Рост:</p>
+                                <span class="color">${data.growth}</span>
+                            </div>
+                            <div class="text__row">
+                                <p>Вес:</p>
+                                <span class="color">${data.weight}</span>
+                            </div>
+                        </div>
+
+                        <p class="text__card">Метро автозаводская</p>
+                        <p class="text__card">от <span class="color">${data.pricemin}</span> рублей</p>
+                    
+                        <button class="btn text__btn">ПОСМОТРЕТЬ АНКЕТУ</button>
+                    
+                    </a>
             `
     });
     //render карточек и вообще любых данных на основании БД
