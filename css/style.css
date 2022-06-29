@@ -309,7 +309,6 @@ input::placeholder{
 
 .info{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: 36px;
 }
@@ -351,15 +350,19 @@ input::placeholder{
 }
 
 .parameters{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
     font-weight: 500;
 }
 
 .parameters__block{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
-
 .parameters__block:not(:last-child){
     margin-bottom: 12px;
 }
