@@ -475,6 +475,23 @@ input::placeholder {
     display: none;
 }
 
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    background: #ff6ed6;
+}
+
 @media screen and (max-width: 1280px) {
     .container {
         max-width: 1024px;
